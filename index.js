@@ -1,10 +1,8 @@
 // node variables 
-const inquirer = require('inquirer');
 const fs = require('fs');
+const inquirer = require('inquirer');
 const util = require('util');
-
 const writeFileAsync = util.promisify(fs.writeFile);
-
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // array of questions for user
@@ -65,16 +63,6 @@ async function userQuestions() {
   return answers;
 }
 
-// // function to write README file
-// function writeToFile(fileName, data) {
-//   fs.writeFile(fileName, data, err => {
-//     if (err) {
-//       return console.log(err);
-//     }
-//     console.log("Sucess! Your README.md file has been generated")
-//   });
-// }
-
 // function to initialize program
 async function init() {
   try {
@@ -82,12 +70,12 @@ async function init() {
 
     const markdown = generateMarkdown(data);
 
-    await writeFileAsync('NewREADME.md', markdown, "utf-8");
+    await writeFileAsync('newREADME.md', markdown, "utf-8");
     console.log("Sucess! Your README.md file has been generated")
   } catch (error) {
     console.log(error);
   }
-};
+}
 
 // function call to initialize program
 init();
