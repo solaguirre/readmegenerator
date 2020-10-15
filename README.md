@@ -1,6 +1,6 @@
 # Good README Generator
 
-[![readme.gif](https://i.postimg.cc/3NDzHgYP/readme.gif)](https://postimg.cc/N2Bd62y4)
+[![readme.gif](https://i.postimg.cc/05DnKp9X/readme.gif)](https://postimg.cc/7bP0pJGS)
 
   ![license](https://img.shields.io/badge/License-MIT-green.svg)
 
