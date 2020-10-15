@@ -30,8 +30,7 @@ function generateMarkdown(data) {
   ## Questions \n If you have any questions or would like to contribute, contact me:
   \n* [Send me an email](mailto:${data.email}.com)
   \n* [Contact me via Github] (https://github.com/${data.github})
-  
-  ## License \n${data.license}`;
+  `;
 }
 
 module.exports = generateMarkdown;
