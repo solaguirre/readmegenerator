@@ -39,6 +39,4 @@ Not applicable.
     
 * [Contact me via Github] (https://github.com/solaguirre)
 
-## License 
-MIT License
     
