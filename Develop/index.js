@@ -1,8 +1,9 @@
 // array of questions for user
 const inquirer = require('inquirer');
 const fs =  require('fs');
+const util = require('util');
 
-const generateMarkdown = require('generateMarkdown.js');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 const questions = [
   {
@@ -54,7 +55,6 @@ const questions = [
 ];
 
 
-
 // function to write README file
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, err => {
@@ -63,14 +63,20 @@ function writeToFile(fileName, data) {
     }
     console.log("Sucess! Your README.md file has been generated")
   });
-
-  let filename = data.name
 }
 
+const writeFileAsync = util.promisify(writeToFile);
 // function to initialize program
 async function init() {
+try {
+  const userInput = await inquirer.prompt(questions);
 
+  await fs.writeFileAsync('NewREADME.md', generateMarkdown);
+  
+} catch (error) {
+  console.log(error);
 }
+};
 
 // function call to initialize program
 init();
